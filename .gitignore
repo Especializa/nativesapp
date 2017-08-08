@@ -1,9 +1,3 @@
-# Based on angular-cli .gitignore with some {N} specific entries
-/yarn.lock
-/platforms
-/hooks
-/package-lock.json
-
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
@@ -13,6 +7,7 @@
 
 # dependencies
 /node_modules
+/platforms
 
 # IDEs and editors
 /.idea
