@@ -1,0 +1,11 @@
+<ListView [items]="chats" class="list-group">
+  <ng-template let-chat="item" let-index="index">
+    <StackLayout class="list-group-item" orientation="horizontal">
+      <Image [src]="chat.contact.avatar" class="thumb"></Image>
+      <StackLayout>
+        <Label [text]="chat.contact.name" android:class="label-item"></Label>
+        <Label [text]="chat.text" class="body"></Label>
+      </StackLayout>
+    </StackLayout>
+  </ng-template>
+</ListView>
