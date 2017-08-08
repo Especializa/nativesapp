@@ -1,46 +1,4 @@
-<ActionBar title="NativesApp" icon="" class="action-bar">
-  <ActionItem ios.position="right" class="m-0">
-    <Button class="mdi action-bar-button m-0"
-      [text]="'mdi-search' | fonticon"></Button>
-  </ActionItem>
-  <ActionItem
-    ios.position="right"
-    android.position="popup"
-    text="New group">
-  </ActionItem>
-  <ActionItem
-    ios.position="right"
-    android.position="popup"
-    text="New broadcast">
-  </ActionItem>
-  <ActionItem
-    ios.position="right"
-    android.position="popup"
-    text="NativesApp Web">
-  </ActionItem>
-  <ActionItem
-    ios.position="right"
-    android.position="popup"
-    text="Starred messages">
-  </ActionItem>
-  <ActionItem
-    ios.position="right"
-    android.position="popup"
-    text="Settings">
-  </ActionItem>
-</ActionBar>
+<ActionBar title="NativesApp"></ActionBar>
 
-<TabView selectedIndex="1" class="tab-view mdi">
-  <StackLayout *tabItem="{iconSource: 'res://ic_photo_camera'}">
-    <Label text="Tab 1"></Label>
-  </StackLayout>
-  <StackLayout *tabItem="{title: 'Chats'}">
-    <ns-chats></ns-chats>
-  </StackLayout>
-  <StackLayout *tabItem="{title: 'Status'}">
-    <Label text="Tab 3"></Label>
-  </StackLayout>
-  <StackLayout *tabItem="{title: 'Calls'}">
-    <Label text="Tab 4"></Label>
-  </StackLayout>
-</TabView>
+<StackLayout>
+</StackLayout>

@@ -4,20 +4,14 @@ import { TNSFontIconModule } from 'nativescript-ng2-fonticon';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import { ChatsComponent } from './chats/chats.component';
 
 @NgModule({
   imports: [
     NativeScriptModule,
-    HomeRoutingModule,
-    TNSFontIconModule.forRoot({
-      'mdi': 'fonts/material-design-icons.css'
-    })
-
+    HomeRoutingModule
   ],
   declarations: [
-    HomeComponent,
-    ChatsComponent
+    HomeComponent
   ],
   schemas: [
     NO_ERRORS_SCHEMA
