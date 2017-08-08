@@ -11,7 +11,7 @@ import { ChatsComponent } from './chats/chats.component';
     NativeScriptModule,
     HomeRoutingModule,
     TNSFontIconModule.forRoot({
-      'mdi': 'fonts/material-design-icons.css'
+      'mdi': 'material-design-icons.css'
     })
 
   ],

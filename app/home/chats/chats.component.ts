@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
     moduleId: module.id,
     selector: 'ns-chats',
     templateUrl: './chats.component.html',
-    styleUrls: ['./chats.component.scss'],
+    styleUrls: ['./chats.component.css'],
 })
 export class ChatsComponent implements OnInit {
   public chats = [];
