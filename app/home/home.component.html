@@ -1,36 +1,42 @@
-<ActionBar title="NativesApp" icon="" class="action-bar">
-  <ActionItem ios.position="right" class="m-0">
-    <Button class="mdi action-bar-button m-0"
-      [text]="'mdi-search' | fonticon"></Button>
-  </ActionItem>
-  <ActionItem
-    ios.position="right"
-    android.position="popup"
-    text="New group">
-  </ActionItem>
-  <ActionItem
-    ios.position="right"
-    android.position="popup"
-    text="New broadcast">
-  </ActionItem>
-  <ActionItem
-    ios.position="right"
-    android.position="popup"
-    text="NativesApp Web">
-  </ActionItem>
-  <ActionItem
-    ios.position="right"
-    android.position="popup"
-    text="Starred messages">
-  </ActionItem>
-  <ActionItem
-    ios.position="right"
-    android.position="popup"
-    text="Settings">
-  </ActionItem>
+ <ActionBar class="action-bar link">
+  <Label text="NativesApp" ios:horizontalAlignment="center"
+    class="action-bar-title" [class.h1]="platform.isIOS"></Label>
+  <ng-container *ngIf="platform.isAndroid">
+    <ActionItem>
+      <Button class="mdi action-bar-button"
+        [text]="'mdi-search' | fonticon"></Button>
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="New group">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="New broadcast">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="NativesApp Web">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Starred messages">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Settings">
+    </ActionItem>
+  </ng-container>
+  <ng-container *ngIf="platform.isIOS">
+    <ActionItem ios.position="left" ios.systemIcon="2" class="link">
+    </ActionItem>
+    <ActionItem ios.position="right" ios.systemIcon="7" class="link">
+    </ActionItem>
+  </ng-container>
 </ActionBar>
 
-<TabView selectedIndex="1" class="tab-view mdi">
+<TabView iosIconRenderingMode="alwaysOriginal"
+  selectedIndex="1" (selectedIndexChange)="onTabChange($event)" [class.tab-view]="platform.isAndroid">
   <StackLayout *tabItem="{iconSource: 'res://ic_photo_camera'}">
     <Label text="Tab 1"></Label>
   </StackLayout>

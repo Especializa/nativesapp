@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
     moduleId: module.id,
@@ -8,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() {}
+  constructor(
+    @Inject('platform') public platform,
+  ) {}
 
   ngOnInit(): void {
+  }
+
+  onTabChanged(event) {
   }
 }
