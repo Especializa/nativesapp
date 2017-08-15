@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 
 @Component({
     moduleId: module.id,
@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() {}
+  constructor(
+    @Inject('platform') public platform
+  ) {}
 
   ngOnInit(): void {
   }
