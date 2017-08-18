@@ -4,6 +4,10 @@
     android:horizontalAlignment="left"
     ios:horizontalAlignment="center"></Label>
   <ng-container *ngIf="platform.isAndroid">
+    <ActionItem>
+      <Button class="mdi action-bar-button"
+        [text]="'mdi-search' | fonticon"></Button>
+    </ActionItem>
     <ActionItem
       android.position="popup"
       text="New group">
@@ -26,9 +30,9 @@
     </ActionItem>
   </ng-container>
   <ng-container *ngIf="platform.isIOS">
-    <ActionItem text="Edit1" ios.position="left">
+    <ActionItem ios.position="left" ios.systemIcon="2">
     </ActionItem>
-    <ActionItem text="Edit2" ios.position="right">
+    <ActionItem ios.position="right" ios.systemIcon="7">
     </ActionItem>
   </ng-container>
 </ActionBar>
