@@ -4,9 +4,7 @@
     android:horizontalAlignment="left"
     ios:horizontalAlignment="center"></Label>
   <ng-container *ngIf="platform.isAndroid">
-    <ActionItem>
-      <Button class="mdi action-bar-button"
-        [text]="'mdi-search' | fonticon"></Button>
+    <ActionItem android.systemIcon="ic_menu_search_mtrl_alpha">
     </ActionItem>
     <ActionItem
       android.position="popup"
