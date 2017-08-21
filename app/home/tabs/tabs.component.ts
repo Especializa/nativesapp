@@ -13,10 +13,6 @@ export class TabsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (this.platform.isAndroid) {
-      this.selectedIndex = 1;
-    } else {
-      this.selectedIndex = 3;
-    }
+    this.selectedIndex = this.platform.isAndroid ? 1 : 3;
   }
 }
