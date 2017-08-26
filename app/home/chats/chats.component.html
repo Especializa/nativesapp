@@ -1,11 +1,15 @@
 <ListView [items]="chats" class="list-group">
   <ng-template let-chat="item" let-index="index">
-    <StackLayout orientation="horizontal" class="list-group-item">
-      <Image [src]="chat.contact.avatar" class="thumb"></Image>
-      <StackLayout>
-        <Label [text]="chat.contact.name"></Label>
-        <Label [text]="chat.text" class="body"></Label>
+    <GridLayout rows="auto, auto" columns="auto, *, auto" class="list-group-item">
+      <Image row="0" col="0" rowSpan="2" [src]="chat.contact.avatar" class="thumb"></Image>
+      <Label row="0" col="1" [text]="chat.contact.name"></Label>
+      <Label row="1" col="1" [text]="chat.text" class="body"></Label>
+      <Label row="0" col="2" [text]="chat.when | date : 'shortTime'"
+        class="body time" [class.time-unread]="chat.unread > 0"></Label>
+      <StackLayout row="1" col="2" orientation="horizontal" class="m-x-auto">
+        <Label *ngIf="chat.muted" [text]="'mdi-volume-off'|fonticon" class="mdi muted"></Label>
+        <Label *ngIf="chat.unread > 0" [text]="chat.unread" class="body unread"></Label>
       </StackLayout>
-    </StackLayout>
+    </GridLayout>
   </ng-template>
 </ListView>
