@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterExtensions } from 'nativescript-angular/router';
 
 import { ChatsService } from './chats.service';
 
@@ -10,10 +11,20 @@ import { ChatsService } from './chats.service';
 })
 export class ChatsComponent implements OnInit {
   public chats = [];
-  constructor(chatsService: ChatsService) {
+  constructor(
+    chatsService: ChatsService,
+    private routerExtensions: RouterExtensions
+  ) {
     this.chats = chatsService.chats;
   }
 
   ngOnInit(): void {
+  }
+
+  goToChat(args) {
+    this.routerExtensions.navigate([
+      'chat',
+      this.chats[args.index]
+    ]);
   }
 }
