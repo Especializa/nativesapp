@@ -1,6 +1,6 @@
-<ListView [items]="chats" class="list-group">
+<ListView [items]="chats" class="list-group" (itemTap)="goToChat($event)">
   <ng-template let-chat="item" let-index="index">
-    <GridLayout nsRouterLink="/chat" rows="auto, auto" columns="auto, *, auto" class="list-group-item">
+    <GridLayout rows="auto, auto" columns="auto, *, auto" class="list-group-item">
       <Image row="0" col="0" rowSpan="2" [src]="chat.contact.avatar" class="thumb"></Image>
       <Label row="0" col="1" [text]="chat.contact.name"></Label>
       <Label row="1" col="1" [text]="chat.text" class="body"></Label>
