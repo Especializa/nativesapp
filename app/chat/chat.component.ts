@@ -18,7 +18,7 @@ export class ChatComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
-      this.chatIndex = params['index'];
+      this.chatIndex = +params['index'];
     });
     this.route.queryParams.subscribe(params => {
       this.name = params['name'];
