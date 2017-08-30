@@ -4,6 +4,7 @@ import { NSModuleFactoryLoader } from "nativescript-angular/router";
 import * as platform from 'platform';
 
 import { AppRoutingModule } from "./app-routing.module";
+import { CoreModule } from './core';
 import { AppComponent } from "./app.component";
 
 @NgModule({
@@ -12,7 +13,8 @@ import { AppComponent } from "./app.component";
     ],
     imports: [
       NativeScriptModule,
-      AppRoutingModule
+      AppRoutingModule,
+      CoreModule
     ],
     declarations: [
       AppComponent

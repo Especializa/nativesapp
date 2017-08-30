@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 import { RouterExtensions } from 'nativescript-angular/router';
 
-import { ChatsService } from './chats.service';
+import { ChatsService } from '../../core';
 
 @Component({
   moduleId: module.id,

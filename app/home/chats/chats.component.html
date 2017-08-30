@@ -4,7 +4,7 @@
       <Image row="0" col="0" rowSpan="2" [src]="chat.contact.avatar" class="thumb"></Image>
       <Label row="0" col="1" [text]="chat.contact.name"></Label>
       <Label row="1" col="1" [text]="chat.text" class="body"></Label>
-      <Label row="0" col="2" [text]="chat.when | date : 'shortTime'"
+      <Label row="0" col="2" [text]="chat.when | shortWhen | uppercase"
         class="body time" [class.time-unread]="chat.unread > 0"></Label>
       <StackLayout row="1" col="2" orientation="horizontal" class="m-x-auto">
         <Label *ngIf="chat.muted" [text]="'mdi-volume-off'|fonticon" class="mdi muted"></Label>
