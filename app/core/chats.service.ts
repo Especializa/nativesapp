@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 
+import { Chat } from './models/chat.model';
+
 @Injectable()
 export class ChatsService {
-  public get chats() {
+  public get chats(): Chat[] {
     return Array(200).fill('').map((ele, idx) => ({
       contact: {
         avatar: `https://randomuser.me/api/portraits/med/${
@@ -14,7 +16,7 @@ export class ChatsService {
             : (['Chuck Pulver', 'Oscar Blundell', 'Irwin Weathersby'][idx % 3])
       },
       type: 'DIRECT',
-      when: Date.now() - ((idx + 1) * 7 * 60 * 1000),
+      when: Date.now() - ((idx + 1) * 40 * 60 * 1000),
       muted: idx % 7 === 0,
       unread: parseInt(Math.random() * 10 + '', 10) - 3,
       // Non-sense phrases

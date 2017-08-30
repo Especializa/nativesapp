@@ -7,7 +7,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { TabsComponent } from './tabs/tabs.component';
 import { ChatsComponent } from './chats/chats.component';
-import { ChatsService } from './chats/chats.service';
+import { ShortWhenPipe } from './chats/short-when.pipe';
 
 @NgModule({
   imports: [
@@ -21,13 +21,11 @@ import { ChatsService } from './chats/chats.service';
   declarations: [
     HomeComponent,
     TabsComponent,
-    ChatsComponent
+    ChatsComponent,
+    ShortWhenPipe
   ],
   schemas: [
     NO_ERRORS_SCHEMA
-  ],
-  providers: [
-    ChatsService
   ]
 })
 export class HomeModule { }
