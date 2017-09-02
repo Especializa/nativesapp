@@ -1,4 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
+import * as platform from 'platform';
 
 @Component({
     moduleId: module.id,
@@ -7,9 +8,10 @@ import { Component, OnInit, Inject } from '@angular/core';
     styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  constructor(
-    @Inject('platform') public platform
-  ) {}
+  public platform;
+  constructor() {
+    this.platform = platform;
+  }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
+import * as platform from 'platform';
 
 @Component({
     moduleId: module.id,
@@ -8,11 +9,9 @@ import { Component, OnInit, Inject } from '@angular/core';
 })
 export class TabsComponent implements OnInit {
   public selectedIndex: number;
-  constructor(
-    @Inject('platform') public platform
-  ) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.selectedIndex = this.platform.isAndroid ? 1 : 3;
+    this.selectedIndex = platform.isAndroid ? 1 : 3;
   }
 }

@@ -1,3 +1,12 @@
 <ActionBar title="Chat" icon="" class="action-bar">
+  <NavigationButton text="1" icon="res://ic_arrow_back" (tap)="goBack()" class="m-x-0"></NavigationButton>
+  <GridLayout rows="auto, auto" columns="auto, *" class="mx-0">
+      <Image row="0" col="0" rowSpan="2" [src]="chat.contact.avatar" class="thumb"></Image>
+      <Label row="0" col="1" [text]="chat.contact.name" class="h2"></Label>
+      <Label row="1" col="1" text="last seen yesterday 10:00 AM" class="footnote"></Label>
+  </GridLayout>
+  <ng-container>
+
+  </ng-container>
 </ActionBar>
-<Label [text]="'Chat component with: ' + chatIndex +  ': ' + name" textWrap="true"></Label>
+<Label [text]="'Chat component with: ' + chatIndex +  ': ' + chat.contact.name" textWrap="true"></Label>

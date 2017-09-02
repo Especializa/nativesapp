@@ -18,7 +18,6 @@ export class ShortWhenPipe implements PipeTransform {
       language += `-${device.region}`;
     }
     const datePipe = new DatePipe(language);
-    console.log(language);
     const parsedDate = parse(value);
 
     if (isToday(parsedDate)) {
