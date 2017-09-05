@@ -6,7 +6,7 @@ var home_component_1 = require("./home.component");
 var routes = [
     { path: '', component: home_component_1.HomeComponent }
 ];
-var HomeRoutingModule = (function () {
+var HomeRoutingModule = /** @class */ (function () {
     function HomeRoutingModule() {
     }
     HomeRoutingModule = __decorate([

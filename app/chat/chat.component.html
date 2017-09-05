@@ -1,3 +1,52 @@
-<ActionBar title="Chat" icon="" class="action-bar">
+<ActionBar title="Chat" class="action-bar link">
+  <GridLayout rows="auto, auto" columns="auto, auto, *" class="action-bar-title" [class.h1]="platform.isIOS">
+    <Image row="0" col="0" rowSpan="2" [src]="chat.contact.avatar" class="thumb"></Image>
+    <Label row="0" col="1" [text]="chat.contact.name" class="title"></Label>
+    <Label row="1" col="1" text="last seen 10:00 AM" class="subtitle"></Label>
+  </GridLayout>
+  <ActionItem ios.position="right" class="action-item mdi" ios:icon="res://video-call">
+    <Label *ngIf="platform.isAndroid" [text]="'mdi-videocam' | fonticon" class="icon"></Label>
+  </ActionItem>
+  <ActionItem ios.position="right" class="action-item mdi" ios:icon="res://tabs/calls">
+    <Label *ngIf="platform.isAndroid" [text]="'mdi-phone' | fonticon" class="icon phone"></Label>
+  </ActionItem>
+  <ng-container *ngIf="platform.isAndroid">
+    <ActionItem
+      android.position="popup"
+      text="View contact">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Media">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Search">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Mute">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Wallpaper">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Block">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Clear chat">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Email chat">
+    </ActionItem>
+    <ActionItem
+      android.position="popup"
+      text="Add shortcut">
+    </ActionItem>
+  </ng-container>
 </ActionBar>
-<Label [text]="'Chat component with: ' + chatIndex +  ': ' + name" textWrap="true"></Label>
+<Label [text]="'Chat component with: ' + chatIndex +  ': ' + chat.contact.name" textWrap="true"></Label>

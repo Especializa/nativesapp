@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Message = (function () {
+var Message = /** @class */ (function () {
     function Message(text, created) {
         if (text === void 0) { text = ''; }
         if (created === void 0) { created = Date.now(); }

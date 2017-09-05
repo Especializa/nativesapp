@@ -25,7 +25,7 @@ export class ChatsComponent implements OnInit {
   goToChat(args) {
     const extras: NavigationExtras = {
       queryParams: {
-        name: this.chats[args.index].contact.name
+        unread: 2
       }
     };
     this.routerExtensions.navigate([

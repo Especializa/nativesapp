@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var nativescript_module_1 = require("nativescript-angular/nativescript.module");
 var chats_service_1 = require("./chats.service");
-var CoreModule = (function () {
+var CoreModule = /** @class */ (function () {
     function CoreModule() {
     }
     CoreModule = __decorate([
