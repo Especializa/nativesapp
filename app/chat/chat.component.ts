@@ -1,7 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RouterExtensions } from 'nativescript-angular/router';
-import { Page } from 'ui/page';
 
 import { ChatsService, Chat } from '../core';
 
@@ -21,7 +20,6 @@ export class ChatComponent implements OnInit {
     private chatsService: ChatsService,
     private router: RouterExtensions,
     @Inject('platform') public platform,
-    private page: Page,
   ) {
   }
 
