@@ -9,7 +9,7 @@ var home_component_1 = require("./home.component");
 var tabs_component_1 = require("./tabs/tabs.component");
 var chats_component_1 = require("./chats/chats.component");
 var short_when_pipe_1 = require("./chats/short-when.pipe");
-var HomeModule = (function () {
+var HomeModule = /** @class */ (function () {
     function HomeModule() {
     }
     HomeModule = __decorate([

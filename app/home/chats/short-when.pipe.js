@@ -6,7 +6,7 @@ var platform_1 = require("platform");
 var parse = require("date-fns/parse");
 var isToday = require("date-fns/is_today");
 var isYesterday = require("date-fns/is_yesterday");
-var ShortWhenPipe = (function () {
+var ShortWhenPipe = /** @class */ (function () {
     function ShortWhenPipe() {
     }
     ShortWhenPipe.prototype.transform = function (value) {

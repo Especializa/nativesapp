@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var ChatsService = (function () {
+var ChatsService = /** @class */ (function () {
     function ChatsService() {
     }
     Object.defineProperty(ChatsService.prototype, "chats", {

@@ -6,7 +6,7 @@ var forms_1 = require("nativescript-angular/forms");
 var nativescript_ngx_fonticon_1 = require("nativescript-ngx-fonticon");
 var chat_routing_module_1 = require("./chat-routing.module");
 var chat_component_1 = require("./chat.component");
-var ChatModule = (function () {
+var ChatModule = /** @class */ (function () {
     function ChatModule() {
     }
     ChatModule = __decorate([

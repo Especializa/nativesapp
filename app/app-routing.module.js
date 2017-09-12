@@ -7,7 +7,7 @@ var routes = [
     { path: 'home', loadChildren: './home/home.module#HomeModule' },
     { path: 'chat/:index', loadChildren: './chat/chat.module#ChatModule' },
 ];
-var AppRoutingModule = (function () {
+var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([

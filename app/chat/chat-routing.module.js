@@ -6,7 +6,7 @@ var chat_component_1 = require("./chat.component");
 var routes = [
     { path: '', component: chat_component_1.ChatComponent }
 ];
-var ChatRoutingModule = (function () {
+var ChatRoutingModule = /** @class */ (function () {
     function ChatRoutingModule() {
     }
     ChatRoutingModule = __decorate([
