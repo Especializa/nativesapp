@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var message_model_1 = require("./message.model");
-var ImageMessage = /** @class */ (function (_super) {
+var ImageMessage = (function (_super) {
     __extends(ImageMessage, _super);
     function ImageMessage(text, created, url, thumbnail) {
         if (text === void 0) { text = ''; }

@@ -32,4 +32,8 @@ export class ChatComponent implements OnInit {
       this.unread = +params['unread'];
     });
   }
+
+  goBack() {
+    this.router.back();
+  }
 }
