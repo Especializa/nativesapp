@@ -47,7 +47,7 @@ export class ChatsService {
         'Clear water rains heavily',
         'Style is interdependant on the relatedness of ' +
           'motivation, subcultures, and management'
-      ][idx % (Math.random() * 10)],
+      ][Math.round(Math.random() * 10)],
       chat,
       sender: Math.random() > .5 ? chat.contact : null,
       created: Date.now() - ((idx + 1) * 40 * 60 * 1000),
