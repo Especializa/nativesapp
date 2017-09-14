@@ -8,7 +8,7 @@ import { Message } from "../../core";
   styleUrls: ["./messages-area.component.css"]
 })
 export class MessagesAreaComponent implements OnInit {
-  @Input() private messages: Message[];
+  @Input() public messages: Message[];
 
   ngOnInit(): void {
   }
