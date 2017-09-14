@@ -1,4 +1,5 @@
 import { Component, OnInit, Inject, ChangeDetectorRef } from '@angular/core';
+import { AndroidActivityBackPressedEventData } from 'application';
 import * as application from 'application';
 
 @Component({
@@ -20,7 +21,7 @@ export class TabsComponent implements OnInit {
     if (this.platform.isAndroid) {
       application.android.on(
         application.AndroidApplication.activityBackPressedEvent,
-        (args: any) => {
+        (args: AndroidActivityBackPressedEventData) => {
           if (this.selectedIndex !== 1) {
             this.selectedIndex = 1;
             args.cancel = true;

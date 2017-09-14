@@ -5,6 +5,8 @@ import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
 
 import { ChatRoutingModule } from './chat-routing.module';
 import { ChatComponent } from './chat.component';
+import { MessagesAreaComponent } from './messages-area/messages-area.component';
+import { MessageBoxComponent } from './message-box/message-box.component';
 
 @NgModule({
   imports: [
@@ -16,7 +18,9 @@ import { ChatComponent } from './chat.component';
     }),
   ],
   declarations: [
-    ChatComponent
+    ChatComponent,
+    MessagesAreaComponent,
+    MessageBoxComponent
   ],
   schemas: [
     NO_ERRORS_SCHEMA

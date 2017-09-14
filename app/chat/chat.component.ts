@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { RouterExtensions } from 'nativescript-angular/router';
 
 import { ChatsService, Chat } from '../core';
+import {Message} from '../core/models/message.model';
 
 @Component({
   moduleId: module.id,
@@ -14,6 +15,7 @@ export class ChatComponent implements OnInit {
   public chatIndex: number;
   public chat: Chat;
   public unread: number;
+  public messages: Message[];
 
   constructor(
     private route: ActivatedRoute,

@@ -50,4 +50,7 @@
     </ActionItem>
   </ng-container>
 </ActionBar>
-<Label [text]="'Chat component with: ' + chatIndex +  ': ' + chat.contact.name" textWrap="true"></Label>
+<GridLayout rows="*, auto" columns="auto">
+  <ns-messages-area row="0" column="0" [messages]="messages"></ns-messages-area>
+  <ns-message-box row="1" column="0"></ns-message-box>
+</GridLayout>
