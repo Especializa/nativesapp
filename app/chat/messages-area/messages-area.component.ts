@@ -1,5 +1,9 @@
-import { Component, OnInit, Inject, Input } from "@angular/core";
-import { Message } from "../../core";
+import { Component, AfterViewInit, Inject, Input,
+         OnInit, ViewChildren, QueryList, ElementRef } from "@angular/core";
+import * as utils from "utils/utils";
+import { Message, SentStatus } from "../../core";
+import { Color } from 'color';
+declare const CGSizeMake: any;
 
 @Component({
   moduleId: module.id,
@@ -7,9 +11,36 @@ import { Message } from "../../core";
   templateUrl: "./messages-area.component.html",
   styleUrls: ["./messages-area.component.css"]
 })
-export class MessagesAreaComponent implements OnInit {
+export class MessagesAreaComponent implements OnInit, AfterViewInit {
   @Input() public messages: Message[];
+  @ViewChildren('messageBubble') public messageBubbles: QueryList<ElementRef>;
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.messages = this.messages.slice(0,50);
+  }
+
+  ngAfterViewInit() {
+  }
+
+  isContinuation(idx: number) {
+    return (!this.messages[idx].sender && this.messages[idx-1] &&
+            !this.messages[idx-1].sender) ||
+           (this.messages[idx].sender && this.messages[idx-1] &&
+            this.messages[idx-1].sender);
+  }
+
+  getIcon(message: Message) {
+    switch (message.sent) {
+      case SentStatus.NOT_SENT:
+        return 'mdi-access-time';
+      case SentStatus.SENT:
+        return 'mdi-done';
+      default:
+        return 'mdi-done-all';
+    }
+  }
+
+  isViewed(message: Message) {
+    return message.sent === SentStatus.VIEWED;
   }
 }
