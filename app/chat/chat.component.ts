@@ -33,6 +33,11 @@ export class ChatComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.unread = +params['unread'];
     });
+    this.getMessages();
+  }
+
+  getMessages() {
+    this.messages = this.chatsService.getMessages(this.chat);
   }
 
   goBack() {

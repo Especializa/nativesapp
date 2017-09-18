@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Chat } from './models/chat.model';
 import { Message } from './models/message.model';
+import { SentStatus } from './models/sent-status.model';
 
 @Injectable()
 export class ChatsService {
@@ -47,10 +48,11 @@ export class ChatsService {
         'Clear water rains heavily',
         'Style is interdependant on the relatedness of ' +
           'motivation, subcultures, and management'
-      ][Math.round(Math.random() * 10)],
+      ][Math.floor(Math.random() * 10)],
       chat,
       sender: Math.random() > .5 ? chat.contact : null,
       created: Date.now() - ((idx + 1) * 40 * 60 * 1000),
+      sent: Math.floor(4 * Math.random()),
     }));
   }
 }
