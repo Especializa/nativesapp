@@ -1,0 +1,49 @@
+.messages-area {
+  width: 100%;
+
+  .messages {
+    padding: 0 10 10 10;
+
+    .message-bubble {
+      margin: 10 15 0 0;
+      border-radius: 8;
+      background-color: white;
+
+      &.myself {
+        background-color: #dcf8c6;
+        margin-right: 0;
+        margin-left: 15;
+      }
+
+      &.continuation {
+        margin-top: 1;
+      }
+
+      .message-text {
+        color: #8D1B1B;
+        font-size: 15;
+        margin: 5;
+      }
+
+      .meta{
+        margin: 0 5 5 5;
+
+        .time {
+          font-size: 13;
+          opacity: .7;
+          margin-right: 5;
+        }
+
+        .check {
+          font-size: 14;
+          padding-top: 2;
+          margin-left: -4;
+
+          &.blue {
+            color: #52c5f7;
+          }
+        }
+      }
+    }
+  }
+}
