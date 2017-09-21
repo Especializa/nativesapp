@@ -1,9 +1,5 @@
-import { Component, AfterViewInit, Inject, Input,
-         OnInit, ViewChildren, QueryList, ElementRef } from "@angular/core";
-import * as utils from "utils/utils";
+import { Component, AfterViewInit, Inject, Input, OnInit } from "@angular/core";
 import { Message, SentStatus } from "../../core";
-import { Color } from 'color';
-declare const CGSizeMake: any;
 
 @Component({
   moduleId: module.id,
@@ -13,7 +9,6 @@ declare const CGSizeMake: any;
 })
 export class MessagesAreaComponent implements OnInit, AfterViewInit {
   @Input() public messages: Message[];
-  @ViewChildren('messageBubble') public messageBubbles: QueryList<ElementRef>;
 
   ngOnInit() {
     this.messages = this.messages.slice(0,50);
