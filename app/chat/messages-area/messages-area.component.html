@@ -1,22 +1,22 @@
 <ScrollView class="messages-area">
   <FlexboxLayout class="messages">
-    <FlexboxLayout
+    <DockLayout
       *ngFor="let message of messages; let idx = index"
       class="message-bubble"
       [class.continuation]="isContinuation(idx)"
       [class.myself]="!message.sender">
-        <Label class="message-text" [text]="message.text"
-          textWrap="true"></Label>
-        <FlexboxLayout class="meta">
-          <Label
-            [text]="message.created | date: 'hh:mm'"
-            class="time"></Label>
-          <Label
-            *ngIf="!message.sender"
-            [text]="getIcon(message) | fonticon"
-            class="mdi check"
-            [class.blue]="isViewed(message)"></Label>
-        </FlexboxLayout>
-    </FlexboxLayout>
+      <Label class="message-text" [text]="message.text"
+        textWrap="true" dock="top"></Label>
+      <FlexboxLayout class="meta" dock="right">
+        <Label
+          [text]="message.created | date: 'hh:mm'"
+          class="time"></Label>
+        <Label
+          *ngIf="!message.sender"
+          [text]="getIcon(message) | fonticon"
+          class="mdi check"
+          [class.blue]="isViewed(message)"></Label>
+      </FlexboxLayout>
+    </DockLayout>
   </FlexboxLayout>
 </ScrollView>

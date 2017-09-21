@@ -7,8 +7,6 @@
     padding: 0 10 10 10;
 
     .message-bubble {
-      align-items: flex-start;
-      flex-wrap: wrap;
       margin: 10 15 0 0;
       border-radius: 8;
       background-color: white;
@@ -21,7 +19,7 @@
       }
 
       &.continuation {
-        margin-top: 1;
+        margin-top: 5;
       }
 
       .message-text {
