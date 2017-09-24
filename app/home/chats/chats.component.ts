@@ -10,8 +10,8 @@ import { ChatsService } from '../../core';
   templateUrl: './chats.component.html',
   styleUrls: ['./chats.component.css'],
 })
-export class ChatsComponent implements OnInit {
-  public chats = [];
+export class ChatsComponent {
+  chats = [];
   constructor(
     chatsService: ChatsService,
     private routerExtensions: RouterExtensions,
@@ -19,18 +19,15 @@ export class ChatsComponent implements OnInit {
     this.chats = chatsService.chats;
   }
 
-  ngOnInit(): void {
-  }
-
   goToChat(args) {
     const extras: NavigationExtras = {
       queryParams: {
-        unread: 2
-      }
+        unread: 2,
+      },
     };
     this.routerExtensions.navigate([
       'chat',
-      args.index
+      args.index,
     ], extras);
   }
 }

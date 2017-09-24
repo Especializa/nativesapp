@@ -1,8 +1,9 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RouterExtensions } from 'nativescript-angular/router';
 
-import { ChatsService, Chat } from '../core';
+import { Chat, ChatsService } from '../core';
+import {Message} from '../core/models/message.model';
 
 @Component({
   moduleId: module.id,
@@ -11,9 +12,10 @@ import { ChatsService, Chat } from '../core';
   styleUrls: ['./chat.component.css'],
 })
 export class ChatComponent implements OnInit {
-  public chatIndex: number;
-  public chat: Chat;
-  public unread: number;
+  chatIndex: number;
+  chat: Chat;
+  unread: number;
+  messages: Message[];
 
   constructor(
     private route: ActivatedRoute,
@@ -24,13 +26,22 @@ export class ChatComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      this.chatIndex = +params['index'];
+    this.route.params.subscribe((params) => {
+      this.chatIndex = +params.index;
       this.chat = this.chatsService.chats[this.chatIndex];
     });
-    this.route.queryParams.subscribe(params => {
-      this.unread = +params['unread'];
+    this.route.queryParams.subscribe((params) => {
+      this.unread = +params.unread;
     });
+    this.getMessages();
+  }
+
+  getMessages() {
+    this.messages = this.chatsService.getMessages(this.chat);
+  }
+
+  goBack() {
+    this.router.back();
   }
 
   goBack() {

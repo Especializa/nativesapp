@@ -1,21 +1,13 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import * as platform from 'platform';
+import { Component, Inject, OnInit } from '@angular/core';
 
 @Component({
     moduleId: module.id,
     selector: 'ns-home',
     templateUrl: './home.component.html',
-    styleUrls: ['./home.component.css']
+    styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
-  public platform;
-  constructor() {
-    this.platform = platform;
-  }
-
-  ngOnInit(): void {
-  }
-
-  onTabChanged(event) {
-  }
+export class HomeComponent {
+  constructor(
+    @Inject('platform') public platform,
+  ) {}
 }

@@ -1,14 +1,14 @@
-import { Pipe, PipeTransform } from '@angular/core';
 import { DatePipe } from '@angular/common';
+import { Pipe, PipeTransform } from '@angular/core';
 import { device } from 'platform';
 
-import * as parse from 'date-fns/parse';
 import * as isToday from 'date-fns/is_today';
 import * as isYesterday from 'date-fns/is_yesterday';
+import * as parse from 'date-fns/parse';
 
 @Pipe({
   name: 'shortWhen',
-  pure: true
+  pure: true,
 })
 export class ShortWhenPipe implements PipeTransform {
 

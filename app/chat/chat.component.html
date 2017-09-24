@@ -1,4 +1,5 @@
 <ActionBar title="Chat" class="action-bar link">
+  <NavigationButton [text]="unread" icon="res://ic_arrow_back" (tap)="goBack()"></NavigationButton>
   <GridLayout rows="auto, auto" columns="auto, auto, *" class="action-bar-title" [class.h1]="platform.isIOS">
     <Image row="0" col="0" rowSpan="2" [src]="chat.contact.avatar" class="thumb"></Image>
     <Label row="0" col="1" [text]="chat.contact.name" class="title"></Label>
@@ -49,4 +50,7 @@
     </ActionItem>
   </ng-container>
 </ActionBar>
-<Label [text]="'Chat component with: ' + chatIndex +  ': ' + chat.contact.name" textWrap="true"></Label>
+<GridLayout rows="*, auto" columns="auto" class="wallpaper">
+  <ns-messages-area row="0" column="0" [messages]="messages" class="messages-area"></ns-messages-area>
+  <ns-message-box row="1" column="0" class="message-box"></ns-message-box>
+</GridLayout>
