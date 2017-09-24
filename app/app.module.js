@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var nativescript_module_1 = require("nativescript-angular/nativescript.module");
 var router_1 = require("nativescript-angular/router");
+var platform = require("platform");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var core_2 = require("./core");

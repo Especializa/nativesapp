@@ -21,7 +21,8 @@ import { CoreModule } from './core';
       AppComponent,
     ],
     providers: [
-      { provide: NgModuleFactoryLoader, useClass: NSModuleFactoryLoader }
+      { provide: NgModuleFactoryLoader, useClass: NSModuleFactoryLoader },
+      { provide: 'platform', useValue: platform },
     ],
     schemas: [
       NO_ERRORS_SCHEMA,
