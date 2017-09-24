@@ -43,8 +43,4 @@ export class ChatComponent implements OnInit {
   goBack() {
     this.router.back();
   }
-
-  goBack() {
-    this.router.back();
-  }
 }
