@@ -7,14 +7,11 @@ import { Message, SentStatus } from "../../core";
   templateUrl: "./messages-area.component.html",
   styleUrls: ["./messages-area.component.css"]
 })
-export class MessagesAreaComponent implements OnInit, AfterViewInit {
+export class MessagesAreaComponent implements OnInit {
   @Input() public messages: Message[];
 
   ngOnInit() {
     this.messages = this.messages.slice(0,50);
-  }
-
-  ngAfterViewInit() {
   }
 
   isContinuation(idx: number) {

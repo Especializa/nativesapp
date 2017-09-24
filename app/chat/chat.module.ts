@@ -4,6 +4,7 @@ import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
 
 import { ChatRoutingModule } from './chat-routing.module';
+import { SharedModule } from '../shared/shared.module';
 import { ChatComponent } from './chat.component';
 import { MessagesAreaComponent } from './messages-area/messages-area.component';
 import { MessageBoxComponent } from './message-box/message-box.component';
@@ -13,6 +14,7 @@ import { MessageBoxComponent } from './message-box/message-box.component';
     NativeScriptModule,
     NativeScriptFormsModule,
     ChatRoutingModule,
+    SharedModule,
     TNSFontIconModule.forRoot({
       'mdi': 'material-design-icons.css'
     }),
