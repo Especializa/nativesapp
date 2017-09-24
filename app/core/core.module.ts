@@ -10,6 +10,6 @@ import { ChatsService } from './chats.service';
   declarations: [],
   providers: [
     ChatsService,
-  ]
+  ],
 })
 export class CoreModule { }

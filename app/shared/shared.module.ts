@@ -5,11 +5,11 @@ import { NativeShadowDirective } from './native-shadow.directive';
 @NgModule({
   imports: [],
   declarations: [
-    NativeShadowDirective
+    NativeShadowDirective,
   ],
   exports: [
-    NativeShadowDirective
+    NativeShadowDirective,
   ],
-  providers: []
+  providers: [],
 })
 export class SharedModule { }

@@ -6,7 +6,7 @@ import { SentStatus } from './models/sent-status.model';
 
 @Injectable()
 export class ChatsService {
-  public get chats(): Chat[] {
+  get chats(): Chat[] {
     return Array(200).fill('').map((ele, idx) => ({
       contact: {
         avatar: `https://randomuser.me/api/portraits/med/${
@@ -15,7 +15,7 @@ export class ChatsService {
         // Random names
         name: idx % 2 === 0 ?
               (['Leeanna Munoz', 'Yolanda Karlin', 'Trish Peer'][idx % 3])
-            : (['Chuck Pulver', 'Oscar Blundell', 'Irwin Weathersby'][idx % 3])
+            : (['Chuck Pulver', 'Oscar Blundell', 'Irwin Weathersby'][idx % 3]),
       },
       type: 'DIRECT',
       when: Date.now() - ((idx + 1) * 40 * 60 * 1000),
@@ -29,11 +29,11 @@ export class ChatsService {
         'That stolen figurine is often one floor above you.',
         '\u263A Yay, this course is amazing !!! \u270C',
         'Spam sat down once more.',
-        'Whiskey on the table set a treehouse on fire.'
+        'Whiskey on the table set a treehouse on fire.',
       ][idx % 7],
     }));
   }
-  public getMessages(chat: Chat): Message[] {
+  getMessages(chat: Chat): Message[] {
     return Array(200).fill('').map((ele, idx) => ({
       // Non-sense phrases
       text: [
@@ -47,7 +47,7 @@ export class ChatsService {
         'That memory we used to share stole the goods.',
         'Clear water rains heavily',
         'Style is interdependant on the relatedness of ' +
-          'motivation, subcultures, and management'
+          'motivation, subcultures, and management',
       ][Math.floor(Math.random() * 10)],
       chat,
       sender: Math.random() > .5 ? chat.contact : null,

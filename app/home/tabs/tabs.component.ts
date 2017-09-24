@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, ChangeDetectorRef } from '@angular/core';
+import { ChangeDetectorRef, Component, Inject, OnInit } from '@angular/core';
 import { AndroidActivityBackPressedEventData } from 'application';
 import * as application from 'application';
 
@@ -6,10 +6,10 @@ import * as application from 'application';
     moduleId: module.id,
     selector: 'ns-tabs',
     templateUrl: './tabs.component.html',
-    styleUrls: ['./tabs.component.css']
+    styleUrls: ['./tabs.component.css'],
 })
 export class TabsComponent implements OnInit {
-  public selectedIndex: number;
+  selectedIndex: number;
   constructor(
     @Inject('platform') public platform,
     private changeDetectorRef: ChangeDetectorRef,
@@ -27,7 +27,7 @@ export class TabsComponent implements OnInit {
             args.cancel = true;
             this.changeDetectorRef.detectChanges();
           }
-        }
+        },
       );
     }
   }
