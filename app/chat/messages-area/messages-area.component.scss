@@ -4,10 +4,10 @@
   .messages {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 10 10 10;
+    padding: 0 10 5 10;
 
     .message-bubble {
-      margin: 10 15 0 0;
+      margin: 10 15 2 0;
       padding: 0;
 
       &.myself {
@@ -21,7 +21,7 @@
       }
 
       &.continuation {
-        margin-top: 5;
+        margin-top: 1;
       }
 
       .message-bubble-content {
@@ -46,6 +46,10 @@
             font-size: 13;
             opacity: .7;
             margin-right: 5;
+            &.ios {
+              font-size: 11;
+              opacity: .4;
+            }
           }
 
           .check {
@@ -53,8 +57,16 @@
             padding-top: 2;
             margin-left: -4;
 
+            &.ios {
+              opacity: .6;
+            }
+
             &.blue {
               color: #52c5f7;
+              &.ios {
+                color: #2F97F3;
+                opacity: 1;
+              }
             }
           }
         }

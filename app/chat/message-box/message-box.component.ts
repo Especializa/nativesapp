@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Input } from '@angular/core';
+import { Component, Inject, Input } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -6,8 +6,6 @@ import { Component, OnInit, Inject, Input } from '@angular/core';
   templateUrl: './message-box.component.html',
   styleUrls: ['./message-box.component.css'],
 })
-export class MessageBoxComponent implements OnInit {
-
-  ngOnInit(): void {
-  }
+export class MessageBoxComponent {
+  constructor(@Inject('platform') public platform) {}
 }
