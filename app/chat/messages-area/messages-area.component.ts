@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, Inject, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component,
+         Inject, Input, OnInit } from '@angular/core';
 import { Message, SentStatus } from '../../core';
 
 @Component({
@@ -6,9 +7,12 @@ import { Message, SentStatus } from '../../core';
   selector: 'ns-messages-area',
   templateUrl: './messages-area.component.html',
   styleUrls: ['./messages-area.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MessagesAreaComponent implements OnInit {
   @Input() messages: Message[];
+
+  constructor(@Inject('platform') public platform) {}
 
   ngOnInit() {
     this.messages = this.messages.slice(0, 50);

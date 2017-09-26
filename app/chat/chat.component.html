@@ -51,6 +51,10 @@
   </ng-container>
 </ActionBar>
 <GridLayout rows="*, auto" columns="auto" class="wallpaper">
-  <ns-messages-area row="0" column="0" [messages]="messages" class="messages-area"></ns-messages-area>
-  <ns-message-box row="1" column="0" class="message-box"></ns-message-box>
+  <StackLayout row="0" column="0" width="100%">
+    <ns-messages-area [messages]="messages" class="messages-area"></ns-messages-area>
+  </StackLayout>
+  <StackLayout row="1" column="0" width="100%">
+    <ns-message-box class="message-box"></ns-message-box>
+  </StackLayout>
 </GridLayout>

@@ -11,12 +11,13 @@
           textWrap="true"></Label>
         <FlexboxLayout class="meta">
           <Label
-            [text]="message.created | date: 'hh:mm'"
-            class="time"></Label>
+            [text]="message.created | date: 'shortTime'"
+            class="time" [class.ios]="platform.isIOS"></Label>
           <Label
             *ngIf="!message.sender"
             [text]="getIcon(message) | fonticon"
             class="mdi check"
+            [class.ios]="platform.isIOS"
             [class.blue]="isViewed(message)"></Label>
         </FlexboxLayout>
       </FlexboxLayout>
