@@ -3,10 +3,13 @@
 # Angular Messaging Project for Learning Purposes
 This project is part of course
 - [Aprenda Angular 2 + Nativescript e crie um WhatsApp](https://www.udemy.com/angular-native)
-**[CLICK HERE FOR ALMOST 90% OFF COUPON](https://www.udemy.com/angular-native/?couponCode=LANCAMENTO)**
+**[CLICK HERE FOR ~90% OFF COUPON](https://www.udemy.com/angular-native/?couponCode=LANCAMENTO)**
 
 At the moment, only available in Portuguese, but English version is coming
 very soon. :)
 ### - Screenshot 1: Chats tab (iOS / Android)
 [![N|Solid](https://raw.githubusercontent.com/Especializa/nativesapp/master/app/tools/assets/screenshot-1.png)](https://www.udemy.com/angular-native)
+
+### - Screenshot 2: Chat screen (iOS / Android)
+[![N|Solid](https://raw.githubusercontent.com/Especializa/nativesapp/master/app/tools/assets/screenshot-2.png)](https://www.udemy.com/angular-native)
 
