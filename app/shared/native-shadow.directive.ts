@@ -39,7 +39,7 @@ export class NativeShadowDirective implements AfterViewInit {
     if (tnsView.android && typeof this.nsShadow !== 'string') {
       const shape = new android.graphics.drawable.GradientDrawable();
       shape.setShape(
-        android.graphics.drawable.GradientDrawable.RECTANGLE,
+        android.graphics.drawable.GradientDrawable[this.nsShadow.shape],
       );
       shape.setColor(android.graphics.Color.parseColor(this.nsShadow.color));
       shape.setCornerRadius(this.nsShadow.cornerRadius);
