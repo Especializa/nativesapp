@@ -4,10 +4,10 @@
     [text]="'mdi-add' | fonticon"
     class="mdi icon"></Label>
   <FlexboxLayout
-    [nsShadow]="platform.isAndroid ? {
+    [shadow]="platform.isAndroid ? {
       elevation: 2,
       shape: 'RECTANGLE',
-      color: '#FFFFFF',
+      bgcolor: '#FFFFFF',
       cornerRadius: 50
     } : null" class="text-area">
     <Label
@@ -38,10 +38,10 @@
   <Label
     [text]="'mdi-mic' | fonticon"
     class="mdi icon send"
-    [nsShadow]="platform.isAndroid ? {
+    [shadow]="platform.isAndroid ? {
       elevation: 3,
       shape: 'OVAL',
-      color: '#006968'
+      bgcolor: '#006968'
     } : null"
   ></Label>
 </FlexboxLayout>

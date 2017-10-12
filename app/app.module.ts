@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core';
 
-import { registerElement } from 'nativescript-angular/element-registry';
+import { registerElement } from 'nativescript-angular';
 import { Fab } from 'nativescript-floatingactionbutton';
 
 registerElement('Fab', () => Fab);

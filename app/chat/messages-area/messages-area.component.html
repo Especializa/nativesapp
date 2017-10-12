@@ -1,7 +1,8 @@
 <ScrollView class="messages-area">
   <FlexboxLayout class="messages">
     <StackLayout
-      nsShadow="2"
+      [shadow]="2"
+      cornerRadius="20"
       *ngFor="let message of messages; let idx = index"
       class="message-bubble"
       [class.continuation]="isContinuation(idx)"
